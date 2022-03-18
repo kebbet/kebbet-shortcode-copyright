@@ -3,10 +3,10 @@
  * Plugin Name:       Kebbet plugins - Shortcode: [copyright]
  * Plugin URI:        https://github.com/kebbet/kebbet-shortcode-copyright
  * Description:       Add a shortcode returning copyright info with year.
- * Version:           20210906.02
+ * Version:           1.0.0
  * Author:            Erik Betshammar
  * Author URI:        https://verkan.se
- * Requires at least: 5.8
+ * Requires at least: 5.0
  *
  * @package kebbet-shortcode-copyright
  * @author Erik Betshammar
@@ -38,7 +38,8 @@ function output( $attributes ) {
 	};
 
 	$output = \sprintf(
-		__( '&copy; %s%s' ),
+		/* translators: 1: copyright year, 2: optional, copyright holder name */
+		__( '&copy;  %1$s%2$s' ),
 		wp_date( 'Y' ),
 		$holder
 	);
